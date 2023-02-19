@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/pages/programs/programs.css" />
+    <script
+      src="https://kit.fontawesome.com/0ff39d807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trainer Name</title>
+  </head>
+  <body>
+    <!--/---------------------------------------------->
+    <!--/ Preloader -->
+    <!--/---------------------------------------------->
+    <div class="preloader">
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Navbar -->
+    <!--/---------------------------------------------->
+    <nav class="navbar fixed-top w-100 navbar-expand-lg">
+      <div class="container">
+        <a class="logo" href="./index.html">L O G O</a>
+
+        <!-- offcanvas button -->
+        <button
+          class="btn btn-offcanvas d-flex flex-column d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav ms-auto gap-lg-4 mt-4 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--/---------------------------------------------->
+    <!--/ Offcanvas -->
+    <!--/---------------------------------------------->
+    <div
+      class="offcanvas-lg offcanvas-end"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header ps-4">
+        <h3
+          class="offcanvas-title text-uppercase"
+          id="offcanvasWithBothOptions"
+        >
+          Trainer Name
+        </h3>
+        <button
+          type="button"
+          class="btn-close me-2"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column d-lg-none">
+        <ul class="mt-4 d-flex flex-column align-items-start gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link active" href="./programs.html">Programs</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./testimonials.html">Testimonials</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="social_icons d-flex justify-content-center gap-5">
+          <a class="m-0" href="https://www.instagram.com/tijana_djokic_/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+
+          <a class="m-0" href="https://www.facebook.com/tijana.djokic.7"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a class="m-0" href="https://www.youtube.com/@TijanaDjokic"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Hero -->
+    <!--/---------------------------------------------->
+    <section class="hero">
+      <div class="container d-flex align-items-center justify-content-center">
+        <h1 class="hide">TRAINING PROGRAMS</h1>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Programs -->
+    <!--/---------------------------------------------->
+    <section class="programs">
+      <div class="first_row">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="hide text col d-flex align-items-center order-lg-2">
+              <div class="heading">
+                <h2 class="text-center text-lg-start">
+                  ELEVATE YOUR <span>FITNESS</span>
+                </h2>
+                <span class="line my-4 mx-auto mx-lg-0"></span>
+                <p class="mx-auto text-center text-lg-start">
+                  I offer a variety of training programs to meet the needs of
+                  clients with different goals. From weight loss to muscle
+                  building, performance training to injury rehabilitation, I
+                  have a program that's right for you. And if you have a unique
+                  goal or need, I can even create a custom program just for you!
+                </p>
+              </div>
+            </div>
+            <div class="hide img col d-flex justify-content-center">
+              <img
+                src="./img/programs.png"
+                alt="Trainer standing and holding both hands on her waist"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2><span>WEIGHT</span> LOSS</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-3"
+              src="./img/icons/weightloss.png"
+              alt="Weight loss icon"
+            />
+            <p class="pb-2 text-center">
+              This program is designed to help clients achieve their weight loss
+              goals through a combination of exercise and nutrition. Clients
+              receive a personalized workout plan and nutrition guidance from a
+              certified personal trainer and nutritionist, respectively. The
+              workout plan includes a combination of strength training and
+              cardio to maximize fat burning and boost metabolism. Nutrition
+              guidance includes creating a meal plan that takes into account the
+              client's unique needs and preferences, while also providing
+              education on healthy eating habits. With consistent effort,
+              clients can achieve their desired weight loss goals and improve
+              their overall health.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2><span>MUSCLE</span> BUILDING</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-3"
+              src="./img/icons/muscle.png"
+              alt="Muscle building icon"
+            />
+            <p class="pb-2 text-center">
+              This program is designed to help clients build muscle mass and
+              strength through a combination of resistance training and
+              nutrition. Clients receive a personalized workout plan from a
+              certified personal trainer, which includes a variety of exercises
+              that target different muscle groups. The program is tailored to
+              the client's current fitness level, goals, and preferences. The
+              nutrition plan is designed to support muscle growth, with a focus
+              on protein and nutrient-dense foods. With consistent effort and
+              dedication, clients can see an increase in muscle mass, strength,
+              and overall fitness.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2><span>FUNCTIONAL</span> TRAINING</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-3"
+              src="./img/icons/functional.png"
+              alt="Functional training icon"
+            />
+            <p class="pb-2 text-center">
+              This program is designed to help clients improve their overall
+              functionality and mobility, while also reducing the risk of
+              injury. Clients receive a personalized workout plan from a
+              certified personal trainer, which includes a variety of exercises
+              that mimic everyday movements. The program is tailored to the
+              client's current fitness level, goals, and preferences. With
+              consistent effort, clients can improve their balance, flexibility,
+              coordination, and overall physical ability, allowing them to
+              perform daily activities with more ease and efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2><span>SPORT</span>-SPECIFIC</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-3"
+              src="./img/icons/sport.png"
+              alt="Sport specific training icon"
+            />
+            <p class="pb-2 text-center">
+              This program is designed to help athletes of all levels improve
+              their performance and achieve their sports-related goals. Clients
+              receive a personalized workout plan from a certified personal
+              trainer, which includes exercises that target the specific
+              physical requirements of their sport. The program is tailored to
+              the client's current fitness level, goals, and preferences, and
+              includes exercises to improve strength, speed, agility, and
+              endurance. With consistent effort and dedication, clients can
+              improve their performance and enhance their overall athletic
+              ability.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2>HIIT</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-3"
+              src="./img/icons/hiit.png"
+              alt="High Intensity Interval Training icon"
+            />
+            <p class="pb-2 text-center">
+              High-Intensity Interval Training (HIIT) is a form of exercise that
+              involves short bursts of high-intensity exercise followed by
+              periods of rest or lower intensity exercise. HIIT is designed to
+              challenge the body's limits and increase cardiovascular fitness,
+              muscular endurance, and metabolism. It typically involves
+              exercises such as sprinting, jumping, or plyometrics, followed by
+              brief periods of rest or active recovery. HIIT has been shown to
+              be highly effective at burning fat, building lean muscle, and
+              improving overall fitness levels. It can also be an efficient and
+              time-saving workout, as a high-intensity workout can be completed
+              in a relatively short amount of time.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2>ENDURANCE</h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-5 mt-0"
+              src="./img/icons/endurance.png"
+              alt="Endurance training icon"
+            />
+            <p class="pb-2 text-center">
+              Endurance training is a form of cardiovascular exercise designed
+              to improve the body's ability to perform physical activity for
+              extended periods of time. It typically involves exercises that are
+              low to moderate in intensity and can be sustained for an extended
+              period, such as jogging, cycling, swimming, or rowing. Endurance
+              training can help to improve cardiovascular health, boost
+              metabolism, increase endurance, and reduce the risk of chronic
+              diseases such as obesity, type 2 diabetes, and heart disease. It
+              can also help to improve mental health, reduce stress, and boost
+              overall energy levels.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="program">
+        <div class="container">
+          <div class="text d-flex flex-column align-items-center">
+            <h2>POST-<span>REHABILITATION</span></h2>
+            <span class="line my-4"></span>
+            <img
+              class="mb-4 mt-0"
+              src="./img/icons/rehab.png"
+              alt="Post rehabilitation training icon"
+            />
+            <p class="pb-2 text-center">
+              This program is designed to help clients recover from injury or
+              surgery and regain their physical abilities. Clients receive a
+              personalized workout plan from a certified personal trainer, which
+              is designed in consultation with their physical therapist or
+              medical provider. The program is tailored to the client's specific
+              needs, goals, and preferences, and includes exercises that help to
+              rebuild strength, flexibility, and mobility. With consistent
+              effort and dedication, clients can improve their physical ability
+              and regain their overall health and well-being.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Footer -->
+    <!--/---------------------------------------------->
+    <footer>
+      <div class="container">
+        <div
+          class="row m-0 text-center text-lg-start justify-content-center justify-content-lg-between g-4 g-lg-0"
+        >
+          <div class="col-md-6 order-md-1 col-lg-auto order-lg-1">
+            <h2>TRAINER NAME</h2>
+            <p class="text-center">PERSONAL TRAINER LOCATION</p>
+          </div>
+          <div class="kontakt_col col-md-6 order-md-3 col-lg-auto order-lg-2">
+            <h5 class="mb-3">CONTACT</h5>
+            <div class="kontakt d-flex flex-column gap-1 mb-5">
+              <ul class="p-0">
+                <li>
+                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                </li>
+                <li><a href="tel:+381 23 456 789">+381 23 456 789</a></li>
+              </ul>
+            </div>
+            <h5 class="mb-3">SOCIAL NETWORKS</h5>
+            <div
+              class="social d-flex justify-content-center justify-content-lg-start gap-4 mb-3"
+            >
+              <a class="m-0" href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+
+              <a class="m-0" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+
+              <a class="m-0" href="https://www.youtube.com/"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-2 col-lg-auto order-lg-3">
+            <h5 class="mb-3">NAVIGATE</h5>
+            <ul class="p-0 mapa">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./programs.html">Programs</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./testimonials.html">Testimonials</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div
+            class="icons col-md-6 order-md-4 col-lg-auto order-lg-4 d-flex flex-column justify-content-center flex-md-row flex-lg-column justify-content-lg-start gap-5"
+          >
+            <div>
+              <h5 class="mb-3">ICONS</h5>
+              <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+            </div>
+            <div>
+              <h5 class="mb-3">IMAGES</h5>
+              <a href="https://www.freepik.com/author/drobotdean">Drobotdean</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy text-center py-2">
+        <p class="m-0">
+          &copy; <span class="year"></span> Trainer Name | Made by
+          <a href="https://github.com/dupudev">dupudev</a>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

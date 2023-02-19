@@ -1,0 +1,357 @@
+@use './vars' as *;
+@use './mixins' as *;
+
+/// fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/// global styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $clr_bg-light;
+  font-family: $font-primary;
+  font-size: $font-size;
+  color: $clr_text;
+  line-height: $line-hight;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $clr_text !important;
+}
+
+h1 {
+  font-family: $font-secondary;
+  font-size: 4.5rem;
+  font-weight: 600;
+  @media (orientation: landscape) {
+    font-size: 4rem;
+  }
+  @include media(md) {
+    font-size: 6rem;
+    @media (orientation: landscape) {
+      font-size: 4rem;
+    }
+  }
+  @include media(lg) {
+    @media (orientation: landscape) {
+      font-size: 6rem;
+    }
+  }
+  @include media(xl) {
+    font-size: 8rem;
+  }
+}
+h2 {
+  font-family: $font-secondary;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  @include media(md) {
+    font-size: 5rem;
+  }
+}
+h3 {
+  font-family: $font-secondary;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+h4 {
+  font-family: $font-secondary;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+h5 {
+  font-family: $font-secondary;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.line {
+  display: block;
+  width: 10rem;
+  height: 3px;
+  background-color: $clr_accent;
+}
+
+hr {
+  height: 2px;
+  background-color: $clr_accent;
+  border: none;
+  width: 100%;
+  opacity: 0.5;
+  margin: 3rem 0;
+}
+
+///-----------------------------------------
+/// navbar and offcanvas
+///-----------------------------------------
+.navbar {
+  padding: 1.5rem 0;
+  transition: $transition;
+  z-index: 15;
+  .logo {
+    font-size: 2rem;
+    transition: $transition;
+    &:hover {
+      color: $clr_accent !important;
+    }
+  }
+  .btn-offcanvas {
+    gap: 0.5rem;
+    span {
+      width: 2.5rem;
+      height: 0.3rem;
+      background-color: $clr_text;
+      transition: $transition;
+    }
+    &:hover {
+      span {
+        background-color: $clr_accent;
+      }
+    }
+    &:active,
+    &:focus {
+      border: none;
+    }
+  }
+
+  .nav-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: $clr_accent !important;
+    }
+    &.active {
+      color: $clr_accent !important;
+    }
+  }
+
+  &.scroll {
+    background-color: rgb($clr_bg-dark, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px $clr_accent;
+    padding: 0.75rem 0;
+  }
+}
+
+.offcanvas-lg {
+  background-color: rgb($clr_bg-light, 0.7);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  box-shadow: 0 0 10px $clr_accent;
+  width: 30rem !important;
+  border: none !important;
+  .offcanvas-header {
+    color: $clr_accent;
+    button {
+      opacity: 1;
+      filter: $clr_text_filter;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .offcanvas-body {
+    .nav-link {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      &:hover {
+        color: $clr_accent !important;
+      }
+      &.active {
+        color: $clr_accent !important;
+      }
+    }
+
+    .social_icons {
+      font-size: 3rem;
+      margin-top: 7rem;
+      i {
+        color: $clr_accent;
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// hero - small hero (not home)
+///-----------------------------------------
+.hero {
+  overflow: hidden;
+  height: 40vh;
+  //   padding-top: 6rem;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
+    url('/img/hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    height: 100%;
+    h1 {
+      letter-spacing: 0.5rem;
+      text-align: center;
+      &.hide {
+        transition: transform ease 0.75s 0.1s, opacity ease 0.75s 0.1s;
+        @include media(xl) {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        &.slide_in {
+          @include media(xl) {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    span {
+      color: $clr_accent;
+    }
+  }
+}
+
+///-----------------------------------------
+/// footer
+///-----------------------------------------
+footer {
+  position: relative;
+  z-index: 2;
+  background-color: rgb($clr_accent, 0.1);
+  box-shadow: 0 0 10px $clr_accent;
+  .container {
+    padding: 3rem 0;
+    h2 {
+      color: $clr_accent;
+    }
+    h5 {
+      color: $clr_accent;
+    }
+    .kontakt_col {
+      @include media(md) {
+        margin-top: -10rem;
+      }
+      @include media(lg) {
+        margin-top: 0;
+      }
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          background-color: $clr_accent;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: $transition;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+    .social {
+      a {
+        font-size: 2rem;
+        i {
+          transition: $transition;
+        }
+        &:hover {
+          i {
+            color: $clr_accent;
+          }
+        }
+      }
+    }
+    .mapa,
+    .icons {
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          background-color: $clr_accent;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: $transition;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .copy {
+    background-color: $clr_bg-dark;
+    font-size: 1.5rem;
+    p {
+      a {
+        color: rgb($clr_accent, 0.8) !important;
+        text-decoration: underline;
+        &:hover {
+          color: $clr_accent !important;
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// scroll bar
+///-----------------------------------------
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $clr_bg-light;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $clr_accent;
+
+  &:hover {
+    background-color: lighten($color: $clr_accent, $amount: 10%);
+  }
+}
+
+@supports (scrollbar-color: $clr_accent $clr_bg-light) {
+  * {
+    scrollbar-color: $clr_accent $clr_bg-light;
+    scrollbar-width: auto;
+  }
+}
+
+::selection {
+  background: rgb($clr_accent, 0.3);
+}
+::-moz-selection {
+  background: rgb($clr_accent, 0.3);
+}

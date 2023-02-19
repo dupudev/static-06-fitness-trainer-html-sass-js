@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/pages/home/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0ff39d807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trainer Name</title>
+  </head>
+  <body>
+    <!--/---------------------------------------------->
+    <!--/ Preloader -->
+    <!--/---------------------------------------------->
+    <div class="preloader">
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Navbar -->
+    <!--/---------------------------------------------->
+    <nav class="navbar fixed-top w-100 navbar-expand-lg">
+      <div class="container">
+        <a class="logo" href="./index.html">L O G O</a>
+
+        <!-- offcanvas button -->
+        <button
+          class="btn btn-offcanvas d-flex flex-column d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav ms-auto gap-lg-4 mt-4 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--/---------------------------------------------->
+    <!--/ Offcanvas -->
+    <!--/---------------------------------------------->
+    <div
+      class="offcanvas-lg offcanvas-end"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header ps-4">
+        <h3
+          class="offcanvas-title text-uppercase"
+          id="offcanvasWithBothOptions"
+        >
+          Trainer Name
+        </h3>
+        <button
+          type="button"
+          class="btn-close me-2"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column d-lg-none">
+        <ul class="mt-4 d-flex flex-column align-items-start gap-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./programs.html">Programs</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./testimonials.html">Testimonials</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="social_icons d-flex justify-content-center gap-5">
+          <a class="m-0" href="https://www.instagram.com/tijana_djokic_/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+
+          <a class="m-0" href="https://www.facebook.com/tijana.djokic.7"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a class="m-0" href="https://www.youtube.com/@TijanaDjokic"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Hero -->
+    <!--/---------------------------------------------->
+    <section class="hero_home">
+      <div
+        class="container d-flex flex-column flex-xl-row justify-content-between h-100"
+      >
+        <div
+          class="hide text text-center text-xl-start d-flex flex-column justify-content-center align-items-center align-items-xl-start gap-3 gap-lg-5"
+        >
+          <h1>
+            <span>START</span> YOUR <br />
+            <span>TRANSFORMATION</span> <br />
+            WITH ONE <span>CLICK</span>!
+          </h1>
+          <h4 class="mb-4">PERSONAL TRAINER - <span>LOCATION</span></h4>
+          <a class="button" href="./contact.html">START NOW</a>
+        </div>
+        <div
+          class="hide img d-flex justify-content-center flex-grow-1 flex-shrink-1"
+        >
+          <!-- <img src="./img/hero.png" alt="" /> -->
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ About -->
+    <!--/---------------------------------------------->
+    <section class="hide_bg about">
+      <div class="container">
+        <div class="row">
+          <div
+            class="hide about_img col-lg-6 order-2 order-lg-1 d-flex justify-content-center justify-content-lg-start"
+          >
+            <img
+              src="./img/about.png"
+              alt="Trainer flexing arm while holding dumbbell"
+            />
+          </div>
+          <div
+            class="about_text col-lg-6 order-1 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-start"
+          >
+            <div class="hide">
+              <h2>WHO IS <span>TRAINER NAME</span>?</h2>
+              <span class="line my-4 mx-auto mx-md-0"></span>
+              <p class="pb-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+                et quo nisi culpa nihil! Voluptatibus qui illum aliquid rem
+                doloribus.
+              </p>
+              <p class="pb-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Necessitatibus architecto provident aliquam velit, rerum
+                explicabo odit debitis suscipit nam atque voluptates, vel, quia
+                voluptate quas iure nobis doloribus enim ea quasi. Minus non
+                qui, quidem voluptatem tempora, cumque perferendis iure beatae
+                debitis inventore assumenda, illum temporibus similique quasi
+                expedita consectetur.
+              </p>
+              <a class="button align-self-md-start" href="./about.html"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Services -->
+    <!--/---------------------------------------------->
+    <section class="services">
+      <div class="container">
+        <div class="heading">
+          <h2 class="text-center">SERVICES</h2>
+          <span class="line my-4 mx-auto"></span>
+          <p class="mx-auto text-center px-2">
+            Whatever your fitness needs, I have a solution that's right for you.
+            From one-on-one personal training to fun, high-energy group
+            sessions, I offer a range of services to help you reach your goals.
+            And with online training and nutrition coaching, you can get expert
+            guidance from the comfort of your own home.
+          </p>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="mb-5"
+                  src="./img/icons/1on1.png"
+                  alt="1 on 1 training icon"
+                />
+                <h3><span>1</span> ON <span>1</span></h3>
+                <hr />
+                <p>
+                  With 1 on 1 training, you receive 100% of the trainer's
+                  attention, allowing them to focus specifically on your
+                  individual needs, goals, and fitness level.
+                </p>
+              </div>
+              <div
+                class="swiper-slide d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="mb-5"
+                  src="./img/icons/partner.png"
+                  alt="partner training icon"
+                />
+                <h3><span>PARTNER</span> TRAINING</h3>
+                <hr />
+                <p>
+                  Partner training is a social approach to fitness that allows
+                  you to workout with a friend, family member or partner in a
+                  supportive and fun environment.
+                </p>
+              </div>
+              <div
+                class="swiper-slide d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="mb-5"
+                  src="./img/icons/group.png"
+                  alt="group training icon"
+                />
+                <h3>SMALL <span>GROUP</span></h3>
+                <hr />
+                <p>
+                  Group training is a social, energetic approach to fitness that
+                  allows you to workout with others in a supportive and fun
+                  environment.
+                </p>
+              </div>
+              <div
+                class="swiper-slide d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="mb-5"
+                  src="./img/icons/online.png"
+                  alt="online coaching icon"
+                />
+                <h3>ONLINE <span>COACHING</span></h3>
+                <hr />
+                <p>
+                  Online training is a convenient and flexible way to access
+                  fitness training from the comfort of your own home or wherever
+                  you have internet access.
+                </p>
+              </div>
+              <div
+                class="swiper-slide d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="mb-5"
+                  src="./img/icons/nutrition.png"
+                  alt="nutrition planning icon"
+                />
+                <h3><span>NUTRITION</span> PLANNING</h3>
+                <hr />
+                <p>
+                  Nutrition planning is an essential aspect of any fitness
+                  program. It involves creating a customized plan for a client's
+                  daily nutritional needs to support their fitness goals.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination1"></div>
+          <div
+            class="swiper-button-next swiper-button-next1 d-none d-sm-block"
+          ></div>
+          <div
+            class="swiper-button-prev swiper-button-prev1 d-none d-sm-block"
+          ></div>
+        </div>
+
+        <div class="all_services text-center">
+          <a class="button" href="./services.html">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Training programs -->
+    <!--/---------------------------------------------->
+    <section class="hide_bg cta">
+      <div class="container">
+        <div class="row">
+          <div
+            class="cta_text col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-start"
+          >
+            <div class="hide">
+              <h2>TRAINING <span>PROGRAMS</span></h2>
+              <span class="line my-4"></span>
+              <p class="pb-4">
+                I offer a variety of training programs to meet the needs of
+                clients with different goals. From weight loss to muscle
+                building, performance training to injury rehabilitation, I have
+                a program that's right for you. And if you have a unique goal or
+                need, I can even create a custom program just for you!
+              </p>
+              <a class="button align-self-md-start" href="./programs.html"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+          <div
+            class="hide cta_img col-lg-6 d-flex justify-content-center justify-content-lg-end"
+          >
+            <img src="./img/cta.png" alt="Trainer flexing arm" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Pricing -->
+    <!--/---------------------------------------------->
+    <section class="pricing">
+      <div class="container">
+        <div class="heading">
+          <h2 class="text-center">PRICING</h2>
+          <span class="line my-4 mx-auto"></span>
+          <p class="mx-auto text-center px-2">
+            I offer competitive pricing for all of my services. Whether you're
+            looking for one-on-one personal training or the support of a group,
+            I have a pricing option that fits your budget.
+          </p>
+        </div>
+        <div class="row row-cols-1 g-5 gap-lg-0 row-cols-lg-3 m-0">
+          <div class="col-sm-10 col-md-8 mx-auto">
+            <div
+              class="mx-3 mx-sm-0 price h-100 d-flex flex-column align-items-center"
+            >
+              <img
+                class="mb-5"
+                src="./img/icons/dumbbells2.png"
+                alt="Dumbbells pricing icon"
+              />
+              <h3 class="mb-2 text-center"><span>1</span> ON <span>1</span></h3>
+              <hr />
+              <h4>30<span>&euro;</span> / <span>SESSION</span></h4>
+              <p>OR</p>
+              <h4>300<span>&euro;</span> / <span>MONTH</span></h4>
+              <hr />
+              <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                aliquid tempore cum in et itaque tempora voluptatum recusandae
+                sunt accusamus.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-10 col-md-8 mx-auto">
+            <div
+              class="mx-3 mx-sm-0 price h-100 d-flex flex-column align-items-center"
+            >
+              <img
+                class="mb-5"
+                src="./img/icons/dumbbells2.png"
+                alt="Dumbbells pricing icon"
+              />
+              <h3 class="mb-2 text-center"><span>PARTNER</span> TRAINING</h3>
+              <hr />
+              <h4>25<span>&euro;</span> / <span>SESSION</span></h4>
+              <p>OR</p>
+              <h4>250<span>&euro;</span> / <span>MONTH</span></h4>
+
+              <hr />
+              <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                aliquid tempore cum in et itaque tempora voluptatum recusandae
+                sunt accusamus.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-10 col-md-8 mx-auto">
+            <div
+              class="mx-3 mx-sm-0 price h-100 d-flex flex-column align-items-center"
+            >
+              <img
+                class="mb-5"
+                src="./img/icons/dumbbells2.png"
+                alt="Dumbbells pricing icon"
+              />
+              <h3 class="mb-2 text-center">SMALL <span>GROUP</span></h3>
+              <hr />
+              <h4>20<span>&euro;</span> / <span>SESSION</span></h4>
+              <p>OR</p>
+              <h4>200<span>&euro;</span> / <span>MONTH</span></h4>
+              <hr />
+              <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                aliquid tempore cum in et itaque tempora voluptatum recusandae
+                sunt accusamus.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="all_prices text-center">
+          <a class="button" href="./pricing.html">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Testimonials -->
+    <!--/---------------------------------------------->
+    <section class="testimonials">
+      <div class="container">
+        <div class="heading">
+          <h2 class="text-center">TESTIMONIALS</h2>
+          <span class="line my-4 mx-auto"></span>
+          <p class="mx-auto text-center px-2">
+            I believe that my clients' experiences and success stories are the
+            best testament to the quality of my training programs. That's why I
+            am proud to showcase a selection of testimonials from my satisfied
+            clients. Read on to see how I have helped others achieve their
+            fitness goals and improve their overall health.
+          </p>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  [Trainer Name] has changed my life! I've been working with her
+                  for 6 month and I've never felt better. She creates custom
+                  workout plans that are both challenging and fun, and she is
+                  always there to provide support and encouragement. I can't
+                  recommend her enough!
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  [Trainer Name] is an amazing trainer! She has helped me get in
+                  the best shape of my life, and she makes working out fun and
+                  enjoyable. I highly recommend her to anyone looking to reach
+                  their fitness goals.
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  I was skeptical about hiring a personal trainer, but [Trainer
+                  Name] has completely changed my mind. She creates a supportive
+                  and empowering environment, and she has helped me achieve
+                  results I never thought possible. Thank you, [Trainer Name]!
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  I never thought I would enjoy working out, but [Trainer Name]
+                  has made it such a positive experience. I have seen
+                  significant improvements in my strength and overall fitness
+                  since starting [training program name]. I highly recommend
+                  [Trainer Name] to anyone looking for a knowledgeable and
+                  supportive fitness coach.
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  I have been training with [Trainer Name] for several months
+                  now and I am blown away by the progress I have made. [Trainer
+                  Name] is extremely knowledgeable and has helped me achieve my
+                  fitness goals in a safe and effective way.
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+              <div class="swiper-slide d-flex flex-column">
+                <img src="./img/icons/quotes.png" alt="Quotation mark icon" />
+                <p class="pb-5">
+                  I was skeptical about hiring a personal trainer, but [Trainer
+                  Name] has completely changed my mind. She creates a supportive
+                  and empowering environment, and she has helped me achieve
+                  results I never thought possible. Thank you, [Trainer Name]!
+                </p>
+                <cite class="mt-auto">- Client Name</cite>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination2"></div>
+          <div
+            class="swiper-button-next swiper-button-next2 d-none d-sm-block"
+          ></div>
+          <div
+            class="swiper-button-prev swiper-button-prev2 d-none d-sm-block"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Contact -->
+    <!--/---------------------------------------------->
+    <section class="contact">
+      <div class="container">
+        <div class="heading">
+          <h2 class="text-center">HOW TO <span>CONTACT ME</span>?</h2>
+          <span class="line my-4 mx-auto"></span>
+          <p class="mx-auto text-center px-2">
+            Ready to get started on your fitness journey? I would love to hear
+            from you! I'm here to answer any questions you may have and help you
+            find the right training program to meet your needs. I look forward
+            to hearing from you and helping you achieve your fitness goals!
+          </p>
+        </div>
+
+        <div class="row justify-content-center gap-5 gap-xl-0 m-0">
+          <div class="col-lg-8 col-xl-4 contact_links">
+            <div
+              class="row text-center text-md-start justify-content-center gap-5 gap-md-0 gap-xl-5"
+            >
+              <div
+                class="col-md-6 col-xl-12 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="kontakt_podaci d-flex flex-column gap-4">
+                  <h4 class="mb-2">CONTACT INFO</h4>
+                  <div class="email d-flex align-items-center gap-3">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:example@gmail.com">example@gmail.com</a>
+                  </div>
+                  <div class="phone d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+381 23 456 789">+381 23 456 789</a>
+                  </div>
+                  <div class="location d-flex align-items-center gap-3 mb-5">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="m-0">Location</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-4 col-xl-12 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="drustvene_mreze d-flex flex-column gap-4">
+                  <h4 class="mb-2">SOCIAL NETWORKS</h4>
+                  <div class="instagram d-flex align-items-center gap-3">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a class="m-0" href="https://www.instagram.com/"
+                      >Instagram</a
+                    >
+                  </div>
+                  <div class="facebook d-flex align-items-center gap-3">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a class="m-0" href="https://www.facebook.com/">Facebook</a>
+                  </div>
+                  <div class="youtube d-flex align-items-center gap-3">
+                    <i class="fa-brands fa-youtube"></i>
+                    <a class="m-0" href="https://www.youtube.com/">Youtube</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-xl-4 contact_form mt-5 mt-xl-0">
+            <h4 class="mb-4">SEND ME A MESSAGE:</h4>
+            <form action="" class="d-flex flex-column gap-4">
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                required
+              ></textarea>
+              <input class="button" type="submit" value="SEND" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Footer -->
+    <!--/---------------------------------------------->
+    <footer>
+      <div class="container">
+        <div
+          class="row m-0 text-center text-lg-start justify-content-center justify-content-lg-between g-4 g-lg-0"
+        >
+          <div class="col-md-6 order-md-1 col-lg-auto order-lg-1">
+            <h2>TRAINER NAME</h2>
+            <p class="text-center">PERSONAL TRAINER LOCATION</p>
+          </div>
+          <div class="kontakt_col col-md-6 order-md-3 col-lg-auto order-lg-2">
+            <h5 class="mb-3">CONTACT</h5>
+            <div class="kontakt d-flex flex-column gap-1 mb-5">
+              <ul class="p-0">
+                <li>
+                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                </li>
+                <li><a href="tel:+381 23 456 789">+381 23 456 789</a></li>
+              </ul>
+            </div>
+            <h5 class="mb-3">SOCIAL NETWORKS</h5>
+            <div
+              class="social d-flex justify-content-center justify-content-lg-start gap-4 mb-3"
+            >
+              <a class="m-0" href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+
+              <a class="m-0" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+
+              <a class="m-0" href="https://www.youtube.com/"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-2 col-lg-auto order-lg-3">
+            <h5 class="mb-3">NAVIGATE</h5>
+            <ul class="p-0 mapa">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./programs.html">Programs</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./testimonials.html">Testimonials</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div
+            class="icons col-md-6 order-md-4 col-lg-auto order-lg-4 d-flex flex-column justify-content-center flex-md-row flex-lg-column justify-content-lg-start gap-5"
+          >
+            <div>
+              <h5 class="mb-3">ICONS</h5>
+              <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+            </div>
+            <div>
+              <h5 class="mb-3">IMAGES</h5>
+              <a href="https://www.freepik.com/author/drobotdean">Drobotdean</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy text-center py-2">
+        <p class="m-0">
+          &copy; <span class="year"></span> Trainer Name | Made by
+          <a href="https://github.com/dupudev">dupudev</a>
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

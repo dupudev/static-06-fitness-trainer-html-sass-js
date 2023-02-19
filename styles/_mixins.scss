@@ -1,0 +1,42 @@
+@use './vars' as *;
+
+@mixin button($color: $clr_text, $bg: transparent, $border: $color) {
+  color: $color !important;
+  background-color: $bg;
+  padding: 0.5em 1.5em;
+  border: 1px solid $border;
+  transition: $transition;
+}
+
+@mixin media($device) {
+  @if $device == x-small {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+  @if $device == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $device == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $device == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $device == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $device == xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}

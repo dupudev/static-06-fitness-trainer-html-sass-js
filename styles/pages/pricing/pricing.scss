@@ -1,0 +1,129 @@
+@use '../../' as *;
+
+///-----------------------------------------
+/// Hero
+///-----------------------------------------
+
+// in _globals.scss
+
+///-----------------------------------------
+/// Pricing
+///-----------------------------------------
+
+.pricing {
+  .first_row {
+    overflow: hidden;
+    background: linear-gradient(
+        -40deg,
+        rgb($clr_accent, 0.07) 30%,
+        transparent 30%
+      ),
+      linear-gradient(-55deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
+      linear-gradient(-18deg, rgb($clr_accent, 0.07) 45%, $clr_bg-light 45%);
+
+    .container {
+      .text {
+        padding-top: 7rem;
+        @include media(lg) {
+          padding-top: 0;
+        }
+        .heading {
+          h2 {
+            span {
+              color: $clr_accent;
+            }
+          }
+        }
+        &.hide {
+          transition: transform ease 0.75s 0.5s, opacity ease 0.75s 0.5s;
+          @include media(xl) {
+            transform: translateX(-200px);
+            opacity: 0;
+          }
+          &.slide_in {
+            @include media(xl) {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .img {
+      overflow: hidden;
+      padding-top: $padding-top;
+      img {
+        transition: $transition;
+        &:hover {
+          filter: drop-shadow(0 0 5px $clr_accent);
+          transform: scale(1.05);
+        }
+      }
+      &.hide {
+          transition: transform ease 0.75s 0.6s, opacity ease 0.75s 0.6s;
+          @include media(xl) {
+            transform: translateY(200px);
+            opacity: 0;
+          }
+          &.slide_in {
+            @include media(xl) {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+        }
+    }
+  }
+  .prices {
+    background-color: $clr_bg-dark;
+    .container {
+      padding: $padding-container;
+      .heading {
+        margin-bottom: 5rem;
+        p {
+          @include media(lg) {
+            width: 75%;
+          }
+        }
+      }
+      .price {
+        background-image: linear-gradient($clr_bg-light, $clr_bg-light);
+        padding: 4rem 3rem;
+        border: 2px solid rgb($clr_accent, 0.2);
+        transition: border $transition, transform $transition;
+        &:hover {
+          border: 2px solid $clr_accent;
+          transform: translateY(-2rem);
+        }
+        img {
+          width: 10rem;
+          filter: $clr_filter;
+        }
+        h3 {
+          span {
+            color: $clr_accent;
+          }
+        }
+        h4 {
+          span {
+            &:nth-child(1) {
+              color: $clr_accent;
+            }
+            &:nth-child(2) {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+      p {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Footer
+///-----------------------------------------
+
+// in _globals.scss

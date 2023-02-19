@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/pages/about/about.css" />
+    <script
+      src="https://kit.fontawesome.com/0ff39d807d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trainer Name</title>
+  </head>
+  <body>
+    <!--/---------------------------------------------->
+    <!--/ Preloader -->
+    <!--/---------------------------------------------->
+    <div class="preloader">
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Navbar -->
+    <!--/---------------------------------------------->
+    <nav class="navbar fixed-top w-100 navbar-expand-lg">
+      <div class="container">
+        <a class="logo" href="./index.html">L O G O</a>
+
+        <!-- offcanvas button -->
+        <button
+          class="btn btn-offcanvas d-flex flex-column d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav ms-auto gap-lg-4 mt-4 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--/---------------------------------------------->
+    <!--/ Offcanvas -->
+    <!--/---------------------------------------------->
+    <div
+      class="offcanvas-lg offcanvas-end"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header ps-4">
+        <h3
+          class="offcanvas-title text-uppercase"
+          id="offcanvasWithBothOptions"
+        >
+          Trainer Name
+        </h3>
+        <button
+          type="button"
+          class="btn-close me-2"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column d-lg-none">
+        <ul class="mt-4 d-flex flex-column align-items-start gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link active" href="./about.html">About</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./programs.html">Programs</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./testimonials.html">Testimonials</a>
+          </li>
+          <li class="nav-item d-inline-block">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="social_icons d-flex justify-content-center gap-5">
+          <a class="m-0" href="https://www.instagram.com/tijana_djokic_/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+
+          <a class="m-0" href="https://www.facebook.com/tijana.djokic.7"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a class="m-0" href="https://www.youtube.com/@TijanaDjokic"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!--/---------------------------------------------->
+    <!--/ Hero -->
+    <!--/---------------------------------------------->
+    <section class="hero">
+      <div class="container d-flex align-items-center justify-content-center">
+        <h1 class="hide">ABOUT</h1>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ About -->
+    <!--/---------------------------------------------->
+    <section class="about">
+      <div class="hide_bg text1">
+        <div class="container">
+          <div class="row">
+            <div
+              class="hide img col-lg-6 order-2 order-lg-1 d-flex justify-content-center"
+            >
+              <img
+                src="./img/about2.png"
+                alt="Trainer stretching arm behind her head"
+              />
+            </div>
+            <div
+              class="hide text text-center text-lg-start col-lg-6 order-1 order-lg-2"
+            >
+              <div>
+                <h2>HI, I AM <span>TRAINER NAME</span></h2>
+                <span class="line my-4"></span>
+                <p class="pb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur animi autem qui expedita exercitationem in error
+                  repellendus dolores ab quas ullam sunt aperiam sapiente id,
+                  illo excepturi et quidem cupiditate tempore eveniet! Enim
+                  aliquid perferendis aperiam, qui quae fugit commodi similique
+                  accusamus ullam quisquam nisi labore asperiores molestiae
+                  repellat reprehenderit.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  labore eum hic excepturi esse repellat! Beatae quasi harum
+                  error tempora! Atque reprehenderit accusamus laborum voluptas
+                  cupiditate molestiae ut quas ab optio aperiam placeat,
+                  repellendus excepturi dignissimos praesentium labore, eius
+                  veniam in qui officiis repudiandae, perspiciatis adipisci
+                  ipsum? Voluptatibus, enim! Maxime possimus nisi soluta iste
+                  ipsam dignissimos consequatur recusandae distinctio repellat
+                  quos et nostrum amet cupiditate sed dicta dolorum hic itaque,
+                  ipsa maiores quod in?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text2">
+        <div class="container">
+          <div class="row">
+            <div class="text text-center text-lg-start col-lg-6">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae et exercitationem voluptates saepe enim autem
+                similique voluptas, praesentium, illo itaque magnam? Neque vitae
+                fugit corporis adipisci ex odit excepturi, saepe sit
+                necessitatibus quo odio sapiente est hic veritatis laboriosam
+                consequuntur, quod quae debitis quasi cumque. Unde consequuntur
+                ea placeat distinctio in tempore, consectetur magnam soluta
+                accusamus excepturi, illum nesciunt sequi repellendus! Soluta
+                placeat accusantium quae expedita doloremque. Doloribus
+                reiciendis cum nobis labore minus repudiandae nam. Doloremque
+                officiis rem cumque unde placeat fugiat eaque dolore dolor
+                nesciunt natus, magni id nisi accusantium est voluptas
+                voluptates optio, illum ut officia! Esse, sit?
+              </p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti eius doloribus voluptatum dolorem adipisci libero ab
+                voluptatem architecto aspernatur, dolore at dolorum
+                perspiciatis, temporibus pariatur, totam tempora atque harum. Et
+                aliquam non nesciunt voluptatum accusamus quidem molestias
+                obcaecati tenetur accusantium at eaque nulla nemo perferendis,
+                aliquid blanditiis vero laudantium asperiores molestiae sint
+                facere?
+              </p>
+            </div>
+            <div class="img col-lg-6 d-flex justify-content-center">
+              <img
+                src="./img/about3.png"
+                alt="Trainer posing with jumping rope around her neck"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/---------------------------------------------->
+    <!--/ Footer -->
+    <!--/---------------------------------------------->
+    <footer>
+      <div class="container">
+        <div
+          class="row m-0 text-center text-lg-start justify-content-center justify-content-lg-between g-4 g-lg-0"
+        >
+          <div class="col-md-6 order-md-1 col-lg-auto order-lg-1">
+            <h2>TRAINER NAME</h2>
+            <p class="text-center">PERSONAL TRAINER LOCATION</p>
+          </div>
+          <div class="kontakt_col col-md-6 order-md-3 col-lg-auto order-lg-2">
+            <h5 class="mb-3">CONTACT</h5>
+            <div class="kontakt d-flex flex-column gap-1 mb-5">
+              <ul class="p-0">
+                <li>
+                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                </li>
+                <li><a href="tel:+381 23 456 789">+381 23 456 789</a></li>
+              </ul>
+            </div>
+            <h5 class="mb-3">SOCIAL NETWORKS</h5>
+            <div
+              class="social d-flex justify-content-center justify-content-lg-start gap-4 mb-3"
+            >
+              <a class="m-0" href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+
+              <a class="m-0" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+
+              <a class="m-0" href="https://www.youtube.com/"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-2 col-lg-auto order-lg-3">
+            <h5 class="mb-3">NAVIGATE</h5>
+            <ul class="p-0 mapa">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./programs.html">Programs</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./testimonials.html">Testimonials</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div
+            class="icons col-md-6 order-md-4 col-lg-auto order-lg-4 d-flex flex-column justify-content-center flex-md-row flex-lg-column justify-content-lg-start gap-5"
+          >
+            <div>
+              <h5 class="mb-3">ICONS</h5>
+              <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+            </div>
+            <div>
+              <h5 class="mb-3">IMAGES</h5>
+              <a href="https://www.freepik.com/author/drobotdean">Drobotdean</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy text-center py-2">
+        <p class="m-0">
+          &copy; <span class="year"></span> Trainer Name | Made by
+          <a href="https://github.com/dupudev">dupudev</a>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

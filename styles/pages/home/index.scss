@@ -1,0 +1,587 @@
+@use '../../' as *;
+
+///-----------------------------------------
+/// Hero
+///-----------------------------------------
+
+.hero_home {
+  overflow: hidden;
+  height: 100vh;
+  height: 100svh;
+  padding-top: 6rem;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
+    url('/img/hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    @media (orientation: landscape) {
+      flex-direction: row;
+    }
+    @include media(xl) {
+      flex-direction: row;
+    }
+    .text {
+      margin-bottom: 3rem;
+      span {
+        color: $clr_accent;
+      }
+      .button {
+        @include media(lg) {
+          font-size: 2rem;
+        }
+
+        @include button();
+        &:hover {
+          border-color: $clr_accent;
+          background-color: $clr_accent;
+        }
+      }
+      &.hide {
+        transition: transform ease 0.75s 0.3s, opacity ease 0.75s 0.3s;
+        @include media(xl) {
+          transform: translateX(-200px);
+          opacity: 0;
+        }
+        &.slide_in {
+          @include media(xl) {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .img {
+      background-image: url('/img/hero.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      @include media(xl) {
+        background-position: bottom right;
+        margin-top: 2rem;
+      }
+      &.hide {
+        transition: transform ease 0.75s 0.4s, opacity ease 0.75s 0.4s;
+        @include media(xl) {
+          transform: translateY(200px);
+          opacity: 0;
+        }
+        &.slide_in {
+          @include media(xl) {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// About
+///-----------------------------------------
+
+.about {
+  overflow: hidden;
+  background: linear-gradient(
+      45deg,
+      rgb($clr_accent, 0.07) 30%,
+      transparent 30%
+    ),
+    linear-gradient(35deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
+    linear-gradient(65deg, rgb($clr_accent, 0.07) 40%, $clr_bg-light 40%);
+  &.hide_bg {
+    @include media(xl) {
+      opacity: 0;
+      transition: $transition;
+    }
+    &.show_bg {
+      @include media(xl) {
+        opacity: 1;
+      }
+    }
+  }
+  .about_img {
+    padding-top: $padding-top;
+    img {
+      transition: $transition;
+    }
+    &:hover {
+      img {
+        filter: drop-shadow(0 0 5px $clr_accent);
+        transform: scale(1.05);
+      }
+    }
+    &.hide {
+      transition: transform ease 0.75s 0.25s, opacity ease 0.75s 0.25s;
+      @include media(xl) {
+        transform: translateY(200px);
+        opacity: 0;
+      }
+      &.slide_in {
+        @include media(xl) {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .about_text {
+    padding-top: 7rem;
+    @include media(lg) {
+      padding-top: 0;
+    }
+    h2 {
+      span {
+        color: $clr_accent;
+      }
+    }
+    .button {
+      @include button();
+      &:hover {
+        border-color: $clr_accent;
+        background-color: $clr_accent;
+      }
+    }
+    .hide {
+      transition: transform ease 0.75s 0.15s, opacity ease 0.75s 0.15s;
+      @include media(xl) {
+        transform: translateX(200px);
+        opacity: 0;
+      }
+      &.slide_in {
+        @include media(xl) {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    @media (prefers-reduced-motion) {
+      .hide {
+        transition: none;
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Services
+///-----------------------------------------
+
+.services {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
+    url('/img/gym2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    padding: $padding-container;
+    .heading {
+      margin-bottom: 7rem;
+      p {
+        @include media(lg) {
+          width: 75%;
+        }
+      }
+    }
+
+    .swiper-container {
+      position: relative;
+      padding-bottom: 4rem;
+      .swiper {
+        width: 90%;
+        @include media(sm) {
+          width: 70%;
+        }
+        @include media(lg) {
+          width: 85%;
+        }
+        @include media(xl) {
+          width: 90%;
+        }
+        .swiper-wrapper {
+          margin-bottom: 2rem;
+          .swiper-slide {
+            height: auto;
+            background-image: linear-gradient(
+              rgb($clr_bg-light, 0.6),
+              rgb($clr_bg-light, 0.6)
+            );
+            padding: 4rem;
+            border: 2px solid rgb($clr_accent, 0.2);
+            transition: border $transition;
+            &:hover {
+              border: 2px solid $clr_accent;
+            }
+            img {
+              max-width: 10rem;
+              align-self: center;
+              filter: $clr_filter;
+            }
+            h3 {
+              span {
+                color: $clr_accent;
+              }
+              text-align: center;
+            }
+          }
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: $clr_accent;
+        transform: translateY(-2rem);
+      }
+
+      .swiper-pagination {
+        color: $clr_accent;
+        .swiper-pagination-bullet {
+          background-color: $clr_text !important;
+          border-radius: 0;
+          transition: width ease 0.3s;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: $clr_accent !important;
+          width: 20px;
+        }
+      }
+    }
+
+    .all_services {
+      padding-top: 7rem;
+      .button {
+        @include button();
+        &:hover {
+          border-color: $clr_accent;
+          background-color: $clr_accent;
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Programs - CTA
+///-----------------------------------------
+
+.cta {
+  overflow: hidden;
+  background: linear-gradient(
+      -45deg,
+      rgb($clr_accent, 0.07) 30%,
+      transparent 30%
+    ),
+    linear-gradient(-65deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
+    linear-gradient(-28deg, rgb($clr_accent, 0.07) 45%, $clr_bg-light 45%);
+  &.hide_bg {
+    @include media(xl) {
+      opacity: 0;
+      transition: $transition;
+    }
+    &.show_bg {
+      @include media(xl) {
+        opacity: 1;
+      }
+    }
+  }
+  .container {
+    .cta_text {
+      padding-top: 7rem;
+      h2 {
+        span {
+          color: $clr_accent;
+        }
+      }
+      @include media(lg) {
+        padding-top: 0;
+      }
+      .button {
+        @include button();
+        &:hover {
+          border-color: $clr_accent;
+          background-color: $clr_accent;
+        }
+      }
+      .hide {
+        transition: transform ease 0.75s 0.15s, opacity ease 0.75s 0.15s;
+        @include media(xl) {
+          transform: translateX(-200px);
+          opacity: 0;
+        }
+        &.slide_in {
+          @include media(xl) {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .cta_img {
+      img {
+        padding-top: $padding-top;
+        transition: $transition;
+      }
+      &:hover {
+        img {
+          filter: drop-shadow(0 0 5px $clr_accent);
+          transform: scale(1.05);
+        }
+      }
+      &.hide {
+        transition: transform ease 0.75s 0.25s, opacity ease 0.75s 0.25s;
+        @include media(xl) {
+          transform: translateY(200px);
+          opacity: 0;
+        }
+        &.slide_in {
+          @include media(xl) {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .heading {
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+///-----------------------------------------
+/// Pricing
+///-----------------------------------------
+
+.pricing {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
+    url('/img/gym3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    padding: $padding-container;
+    .heading {
+      margin-bottom: 5rem;
+      p {
+        @include media(lg) {
+          width: 75%;
+        }
+      }
+    }
+    .price {
+      background-image: linear-gradient(
+        rgb($clr_bg-light, 0.6),
+        rgb($clr_bg-light, 0.6)
+      );
+      padding: 4rem 3rem;
+      border: 2px solid rgb($clr_accent, 0.2);
+      transition: border $transition, transform $transition;
+      &:hover {
+        border: 2px solid $clr_accent;
+      }
+      &:hover {
+        transform: translateY(-2rem);
+      }
+      img {
+        width: 10rem;
+        filter: $clr_filter;
+      }
+      h3 {
+        span {
+          color: $clr_accent;
+        }
+      }
+      h4 {
+        span {
+          &:nth-child(1) {
+            color: $clr_accent;
+          }
+          &:nth-child(2) {
+            font-size: 0.7em;
+          }
+        }
+      }
+      p {
+        margin: 1rem 0;
+      }
+    }
+    .all_prices {
+      padding-top: 7rem;
+      .button {
+        @include button();
+        &:hover {
+          border-color: $clr_accent;
+          background-color: $clr_accent;
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Testimonials
+///-----------------------------------------
+
+.testimonials {
+  .container {
+    padding: $padding-container;
+    .heading {
+      margin-bottom: 7rem;
+      p {
+        @include media(lg) {
+          width: 75%;
+        }
+      }
+      h2 {
+        span {
+          color: $clr_accent;
+        }
+      }
+    }
+    .swiper-container {
+      position: relative;
+      padding-bottom: 4rem;
+      .swiper {
+        width: 90%;
+        @include media(sm) {
+          width: 80%;
+        }
+        @include media(lg) {
+          width: 85%;
+        }
+        @include media(xl) {
+          width: 90%;
+        }
+        .swiper-wrapper {
+          margin-bottom: 2rem;
+          .swiper-slide {
+            background-color: $clr_bg-dark;
+            border: 2px solid rgb($clr_accent, 0.2);
+            transition: border $transition;
+            &:hover {
+              border: 2px solid $clr_accent;
+            }
+            padding: 3rem;
+            height: auto;
+            img {
+              width: 5rem;
+              margin-bottom: 2rem;
+
+              filter: $clr_filter;
+            }
+          }
+        }
+      }
+      .swiper-button-prev {
+        color: $clr_accent;
+        transform: translateY(-2rem);
+      }
+      .swiper-button-next {
+        color: $clr_accent;
+        transform: translateY(-2rem);
+      }
+      .swiper-pagination {
+        color: $clr_accent;
+        .swiper-pagination-bullet {
+          background-color: $clr_text !important;
+          border-radius: 0;
+          transition: width ease 0.3s;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: $clr_accent !important;
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Contact
+///-----------------------------------------
+
+.contact {
+  background-color: $clr_bg-dark;
+  .container {
+    padding: $padding-container;
+    .heading {
+      margin-bottom: 7rem;
+      p {
+        @include media(lg) {
+          width: 75%;
+        }
+      }
+      h2 {
+        span {
+          color: $clr_accent;
+        }
+      }
+    }
+
+    .contact_links {
+      .kontakt_podaci,
+      .drustvene_mreze {
+        min-width: 25rem;
+        @include media(md) {
+          min-width: 0;
+        }
+      }
+      font-size: 1.75rem;
+      i {
+        font-size: 2.5rem;
+        color: $clr_accent;
+        min-width: 4rem;
+        text-align: center;
+      }
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          background-color: $clr_accent;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: $transition;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+    .contact_form {
+      form {
+        input,
+        textarea {
+          background-color: $clr_bg-light;
+          color: $clr_accent;
+          outline: none;
+          border: 1px solid transparent;
+          padding: 1rem;
+          resize: none;
+          transition: $transition;
+          &::placeholder {
+            color: $clr_text;
+          }
+          &:focus {
+            border: 1px solid $clr_accent;
+          }
+        }
+        .button {
+          transition: $transition;
+          &:hover {
+            border: 1px solid $clr_accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Footer
+///-----------------------------------------
+
+// in _globals.scss

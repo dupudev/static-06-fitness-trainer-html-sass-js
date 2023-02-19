@@ -1,0 +1,112 @@
+@use '../../' as *;
+
+///-----------------------------------------
+/// Hero
+///-----------------------------------------
+
+// in _globals.scss
+
+///-----------------------------------------
+/// About
+///-----------------------------------------
+
+.about {
+  .text1 {
+    overflow: hidden;
+    background: linear-gradient(
+        45deg,
+        rgb($clr_accent, 0.07) 30%,
+        transparent 30%
+      ),
+      linear-gradient(35deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
+      linear-gradient(65deg, rgb($clr_accent, 0.07) 40%, $clr_bg-light 40%);
+      
+    &.hide_bg {
+      @include media(xl) {
+        opacity: 0;
+        transition: $transition;
+      }
+      &.show_bg {
+        @include media(xl) {
+          opacity: 1;
+        }
+      }
+    }
+    .text.hide {
+      transition: transform ease 0.75s 0.5s, opacity ease 0.75s 0.5s;
+      @include media(xl) {
+        transform: translateX(200px);
+        opacity: 0;
+      }
+      &.slide_in {
+        @include media(xl) {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    .img.hide {
+      transition: transform ease 0.75s 0.6s, opacity ease 0.75s 0.6s;
+      @include media(xl) {
+        transform: translateY(200px);
+        opacity: 0;
+      }
+      &.slide_in {
+        @include media(xl) {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .container {
+    .img {
+      overflow: hidden;
+      padding-top: $padding-top;
+      img {
+        transition: $transition;
+      }
+      &:hover {
+        img {
+          filter: drop-shadow(0 0 5px $clr_accent);
+          transform: scale(1.05);
+        }
+      }
+    }
+    .text {
+      padding-top: 7rem;
+      @include media(lg) {
+        padding: $padding-container;
+      }
+      span {
+        color: $clr_accent;
+        display: inline-block;
+      }
+    }
+  }
+  .text2 {
+    overflow: hidden;
+    background-color: $clr_bg-dark;
+    .text {
+      padding-top: 7rem;
+      @include media(lg) {
+        padding: $padding-container;
+      }
+    }
+    .img {
+      &:hover {
+        img {
+          filter: drop-shadow(0 0 5px $clr_accent);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Footer
+///-----------------------------------------
+
+// in _globals.scss

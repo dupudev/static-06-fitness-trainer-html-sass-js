@@ -1,0 +1,147 @@
+@use '../../' as *;
+
+///-----------------------------------------
+/// Hero
+///-----------------------------------------
+
+// in _globals.scss
+
+///-----------------------------------------
+/// Contact
+///-----------------------------------------
+
+.contact {
+  .first_row {
+    overflow: hidden;
+    background: linear-gradient(
+        -45deg,
+        rgb($clr_accent, 0.07) 30%,
+        transparent 30%
+      ),
+      linear-gradient(-65deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
+      linear-gradient(-28deg, rgb($clr_accent, 0.07) 45%, $clr_bg-light 45%);
+
+    .container {
+      .text {
+        padding-top: 7rem;
+        @include media(lg) {
+          padding-top: 0;
+        }
+        .heading {
+          h2 {
+            span {
+              color: $clr_accent;
+            }
+          }
+        }
+        &.hide {
+          transition: transform ease 0.75s 0.5s, opacity ease 0.75s 0.5s;
+          @include media(xl) {
+            transform: translateX(-200px);
+            opacity: 0;
+          }
+          &.slide_in {
+            @include media(xl) {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .img {
+        overflow: hidden;
+        padding-top: $padding-top;
+        img {
+          transition: $transition;
+          &:hover {
+            filter: drop-shadow(0 0 5px $clr_accent);
+            transform: scale(1.05);
+          }
+        }
+        &.hide {
+          transition: transform ease 0.75s 0.6s, opacity ease 0.75s 0.6s;
+          @include media(xl) {
+            transform: translateY(200px);
+            opacity: 0;
+          }
+          &.slide_in {
+            @include media(xl) {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact_info {
+    background-color: $clr_bg-dark;
+    .container {
+      padding: $padding-container;
+      .contact_links {
+        .kontakt_podaci,
+        .drustvene_mreze {
+          min-width: 25rem;
+          @include media(md) {
+            min-width: 0;
+          }
+        }
+        font-size: 1.75rem;
+        i {
+          font-size: 2.5rem;
+          color: $clr_accent;
+          min-width: 4rem;
+          text-align: center;
+        }
+        a {
+          position: relative;
+          &:after {
+            position: absolute;
+            content: '';
+            background-color: $clr_accent;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            transition: $transition;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .contact_form {
+      form {
+        input,
+        textarea {
+          background-color: $clr_bg-light;
+          color: $clr_accent;
+          outline: none;
+          border: 1px solid transparent;
+          padding: 1rem;
+          resize: none;
+          transition: $transition;
+          &::placeholder {
+            color: $clr_text;
+          }
+          &:focus {
+            border: 1px solid $clr_accent;
+          }
+        }
+        .button {
+          transition: $transition;
+          &:hover {
+            border: 1px solid $clr_accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+///-----------------------------------------
+/// Footer
+///-----------------------------------------
+
+// in _globals.scss
