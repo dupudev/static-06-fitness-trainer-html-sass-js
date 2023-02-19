@@ -201,7 +201,7 @@ hr {
 .hero {
   overflow: hidden;
   height: 40vh;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("/img/hero_bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("../img/hero_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

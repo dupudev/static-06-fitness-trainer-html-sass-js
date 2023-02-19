@@ -201,7 +201,7 @@ hr {
 .hero {
   overflow: hidden;
   height: 40vh;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("/img/hero_bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("../img/hero_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -741,7 +741,7 @@ footer .copy p a:hover {
   height: 100vh;
   height: 100svh;
   padding-top: 6rem;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("/img/hero_bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("../../../img/hero_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -794,7 +794,7 @@ footer .copy p a:hover {
   }
 }
 .hero_home .container .img {
-  background-image: url("/img/hero.png");
+  background-image: url("../../../img/hero.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -905,7 +905,7 @@ footer .copy p a:hover {
 }
 
 .services {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("/img/gym2.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("../../../img/gym2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1080,7 +1080,7 @@ footer .copy p a:hover {
 }
 
 .pricing {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("/img/gym3.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url("../../../img/gym3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

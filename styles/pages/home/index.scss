@@ -10,7 +10,7 @@
   height: 100svh;
   padding-top: 6rem;
   background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
-    url('/img/hero_bg.jpg');
+    url('../../../img/hero_bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@
       }
     }
     .img {
-      background-image: url('/img/hero.png');
+      background-image: url('../../../img/hero.png');
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
@@ -170,7 +170,7 @@
 
 .services {
   background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
-    url('/img/gym2.jpg');
+    url('../../../img/gym2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -354,7 +354,7 @@
 
 .pricing {
   background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
-    url('/img/gym3.jpg');
+    url('../../../img/gym3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
