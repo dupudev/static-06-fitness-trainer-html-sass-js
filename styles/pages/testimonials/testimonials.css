@@ -257,10 +257,10 @@ footer .container h5 {
     margin-top: 0;
   }
 }
-footer .container .kontakt_col a {
+footer .container .kontakt_col .kontakt a {
   position: relative;
 }
-footer .container .kontakt_col a:after {
+footer .container .kontakt_col .kontakt a:after {
   position: absolute;
   content: "";
   background-color: #e6572f;
@@ -270,7 +270,7 @@ footer .container .kontakt_col a:after {
   width: 0;
   transition: 0.3s ease;
 }
-footer .container .kontakt_col a:hover::after {
+footer .container .kontakt_col .kontakt a:hover::after {
   width: 100%;
 }
 footer .container .social a {
@@ -773,9 +773,11 @@ footer .copy p a:hover {
 .testimonials .first_row .container .img img {
   transition: 0.3s ease;
 }
-.testimonials .first_row .container .img img:hover {
-  filter: drop-shadow(0 0 5px #e6572f);
-  transform: scale(1.05);
+@media (min-width: 1200px) {
+  .testimonials .first_row .container .img img:hover {
+    filter: drop-shadow(0 0 5px #e6572f);
+    transform: scale(1.025);
+  }
 }
 .testimonials .first_row .container .img.hide {
   transition: transform ease 0.75s 0.6s, opacity ease 0.75s 0.6s;

@@ -55,8 +55,10 @@
       img {
         transition: $transition;
         &:hover {
-          filter: drop-shadow(0 0 5px $clr_accent);
-          transform: scale(1.05);
+          @include media(xl) {
+            filter: drop-shadow(0 0 5px $clr_accent);
+            transform: scale(1.025);
+          }
         }
       }
       &.hide {

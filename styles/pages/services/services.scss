@@ -54,11 +54,11 @@
       padding-top: $padding-top;
       img {
         transition: $transition;
-      }
-      &:hover {
-        img {
-          filter: drop-shadow(0 0 5px $clr_accent);
-          transform: scale(1.05);
+        &:hover {
+          @include media(xl) {
+            filter: drop-shadow(0 0 5px $clr_accent);
+            transform: scale(1.025);
+          }
         }
       }
       &.hide {

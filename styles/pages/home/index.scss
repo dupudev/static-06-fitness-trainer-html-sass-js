@@ -90,28 +90,19 @@
     ),
     linear-gradient(35deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
     linear-gradient(65deg, rgb($clr_accent, 0.07) 40%, $clr_bg-light 40%);
-  &.hide_bg {
-    @include media(xl) {
-      opacity: 0;
-      transition: $transition;
-    }
-    &.show_bg {
-      @include media(xl) {
-        opacity: 1;
-      }
-    }
-  }
+
   .about_img {
     padding-top: $padding-top;
     img {
       transition: $transition;
-    }
-    &:hover {
-      img {
-        filter: drop-shadow(0 0 5px $clr_accent);
-        transform: scale(1.05);
+      &:hover {
+        @include media(xl) {
+          filter: drop-shadow(0 0 5px $clr_accent);
+          transform: scale(1.025);
+        }
       }
     }
+
     &.hide {
       transition: transform ease 0.75s 0.25s, opacity ease 0.75s 0.25s;
       @include media(xl) {
@@ -212,7 +203,9 @@
             border: 2px solid rgb($clr_accent, 0.2);
             transition: border $transition;
             &:hover {
-              border: 2px solid $clr_accent;
+              @include media(xl) {
+                border: 2px solid $clr_accent;
+              }
             }
             img {
               max-width: 10rem;
@@ -274,17 +267,7 @@
     ),
     linear-gradient(-65deg, rgb($clr_accent, 0.07) 40%, transparent 40%),
     linear-gradient(-28deg, rgb($clr_accent, 0.07) 45%, $clr_bg-light 45%);
-  &.hide_bg {
-    @include media(xl) {
-      opacity: 0;
-      transition: $transition;
-    }
-    &.show_bg {
-      @include media(xl) {
-        opacity: 1;
-      }
-    }
-  }
+
   .container {
     .cta_text {
       padding-top: 7rem;
@@ -321,11 +304,11 @@
       img {
         padding-top: $padding-top;
         transition: $transition;
-      }
-      &:hover {
-        img {
-          filter: drop-shadow(0 0 5px $clr_accent);
-          transform: scale(1.05);
+        &:hover {
+          @include media(xl) {
+            filter: drop-shadow(0 0 5px $clr_accent);
+            transform: scale(1.025);
+          }
         }
       }
       &.hide {
@@ -378,11 +361,12 @@
       border: 2px solid rgb($clr_accent, 0.2);
       transition: border $transition, transform $transition;
       &:hover {
-        border: 2px solid $clr_accent;
+        @include media(xl) {
+          border: 2px solid $clr_accent;
+          transform: translateY(-1rem);
+        }
       }
-      &:hover {
-        transform: translateY(-2rem);
-      }
+
       img {
         width: 10rem;
         filter: $clr_filter;
@@ -460,8 +444,11 @@
             border: 2px solid rgb($clr_accent, 0.2);
             transition: border $transition;
             &:hover {
-              border: 2px solid $clr_accent;
+              @include media(xl) {
+                border: 2px solid $clr_accent;
+              }
             }
+
             padding: 3rem;
             height: auto;
             img {

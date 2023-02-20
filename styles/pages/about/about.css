@@ -257,10 +257,10 @@ footer .container h5 {
     margin-top: 0;
   }
 }
-footer .container .kontakt_col a {
+footer .container .kontakt_col .kontakt a {
   position: relative;
 }
-footer .container .kontakt_col a:after {
+footer .container .kontakt_col .kontakt a:after {
   position: absolute;
   content: "";
   background-color: #e6572f;
@@ -270,7 +270,7 @@ footer .container .kontakt_col a:after {
   width: 0;
   transition: 0.3s ease;
 }
-footer .container .kontakt_col a:hover::after {
+footer .container .kontakt_col .kontakt a:hover::after {
   width: 100%;
 }
 footer .container .social a {
@@ -740,17 +740,6 @@ footer .copy p a:hover {
   overflow: hidden;
   background: linear-gradient(45deg, rgba(230, 87, 47, 0.07) 30%, transparent 30%), linear-gradient(35deg, rgba(230, 87, 47, 0.07) 40%, transparent 40%), linear-gradient(65deg, rgba(230, 87, 47, 0.07) 40%, #252424 40%);
 }
-@media (min-width: 1200px) {
-  .about .text1.hide_bg {
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-}
-@media (min-width: 1200px) {
-  .about .text1.hide_bg.show_bg {
-    opacity: 1;
-  }
-}
 .about .text1 .text.hide {
   transition: transform ease 0.75s 0.5s, opacity ease 0.75s 0.5s;
 }
@@ -788,9 +777,11 @@ footer .copy p a:hover {
 .about .container .img img {
   transition: 0.3s ease;
 }
-.about .container .img:hover img {
-  filter: drop-shadow(0 0 5px #e6572f);
-  transform: scale(1.05);
+@media (min-width: 1200px) {
+  .about .container .img img:hover {
+    filter: drop-shadow(0 0 5px #e6572f);
+    transform: scale(1.025);
+  }
 }
 .about .container .text {
   padding-top: 7rem;
@@ -815,8 +806,4 @@ footer .copy p a:hover {
   .about .text2 .text {
     padding: 7rem 0;
   }
-}
-.about .text2 .img:hover img {
-  filter: drop-shadow(0 0 5px #e6572f);
-  transform: scale(1.05);
 }/*# sourceMappingURL=about.css.map */

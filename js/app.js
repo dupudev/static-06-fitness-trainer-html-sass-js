@@ -3,7 +3,6 @@ const year = document.querySelector('.year');
 const preloader = document.querySelector('.preloader');
 const body = document.querySelector('body');
 const hiddenElements = document.querySelectorAll('.hide');
-const hiddenBgs = document.querySelectorAll('.hide_bg');
 
 /// Navbar scroll
 window.addEventListener('scroll', () => {
@@ -23,9 +22,6 @@ window.onload = () => {
   hiddenElements.forEach((element) => {
     observer.observe(element);
   });
-  hiddenBgs.forEach((element) => {
-    observer2.observe(element);
-  });
 };
 
 /// Animate on scroll
@@ -36,16 +32,3 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
-const observer2 = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show_bg');
-      }
-    });
-  },
-  {
-    threshold: 0.2,
-  }
-);

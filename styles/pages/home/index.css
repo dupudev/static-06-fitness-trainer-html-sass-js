@@ -257,10 +257,10 @@ footer .container h5 {
     margin-top: 0;
   }
 }
-footer .container .kontakt_col a {
+footer .container .kontakt_col .kontakt a {
   position: relative;
 }
-footer .container .kontakt_col a:after {
+footer .container .kontakt_col .kontakt a:after {
   position: absolute;
   content: "";
   background-color: #e6572f;
@@ -270,7 +270,7 @@ footer .container .kontakt_col a:after {
   width: 0;
   transition: 0.3s ease;
 }
-footer .container .kontakt_col a:hover::after {
+footer .container .kontakt_col .kontakt a:hover::after {
   width: 100%;
 }
 footer .container .social a {
@@ -825,26 +825,17 @@ footer .copy p a:hover {
   overflow: hidden;
   background: linear-gradient(45deg, rgba(230, 87, 47, 0.07) 30%, transparent 30%), linear-gradient(35deg, rgba(230, 87, 47, 0.07) 40%, transparent 40%), linear-gradient(65deg, rgba(230, 87, 47, 0.07) 40%, #252424 40%);
 }
-@media (min-width: 1200px) {
-  .about.hide_bg {
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-}
-@media (min-width: 1200px) {
-  .about.hide_bg.show_bg {
-    opacity: 1;
-  }
-}
 .about .about_img {
   padding-top: 5rem;
 }
 .about .about_img img {
   transition: 0.3s ease;
 }
-.about .about_img:hover img {
-  filter: drop-shadow(0 0 5px #e6572f);
-  transform: scale(1.05);
+@media (min-width: 1200px) {
+  .about .about_img img:hover {
+    filter: drop-shadow(0 0 5px #e6572f);
+    transform: scale(1.025);
+  }
 }
 .about .about_img.hide {
   transition: transform ease 0.75s 0.25s, opacity ease 0.75s 0.25s;
@@ -954,8 +945,10 @@ footer .copy p a:hover {
   border: 2px solid rgba(230, 87, 47, 0.2);
   transition: border 0.3s ease;
 }
-.services .container .swiper-container .swiper .swiper-wrapper .swiper-slide:hover {
-  border: 2px solid #e6572f;
+@media (min-width: 1200px) {
+  .services .container .swiper-container .swiper .swiper-wrapper .swiper-slide:hover {
+    border: 2px solid #e6572f;
+  }
 }
 .services .container .swiper-container .swiper .swiper-wrapper .swiper-slide img {
   max-width: 10rem;
@@ -1004,17 +997,6 @@ footer .copy p a:hover {
   overflow: hidden;
   background: linear-gradient(-45deg, rgba(230, 87, 47, 0.07) 30%, transparent 30%), linear-gradient(-65deg, rgba(230, 87, 47, 0.07) 40%, transparent 40%), linear-gradient(-28deg, rgba(230, 87, 47, 0.07) 45%, #252424 45%);
 }
-@media (min-width: 1200px) {
-  .cta.hide_bg {
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-}
-@media (min-width: 1200px) {
-  .cta.hide_bg.show_bg {
-    opacity: 1;
-  }
-}
 .cta .container .cta_text {
   padding-top: 7rem;
 }
@@ -1056,9 +1038,11 @@ footer .copy p a:hover {
   padding-top: 5rem;
   transition: 0.3s ease;
 }
-.cta .container .cta_img:hover img {
-  filter: drop-shadow(0 0 5px #e6572f);
-  transform: scale(1.05);
+@media (min-width: 1200px) {
+  .cta .container .cta_img img:hover {
+    filter: drop-shadow(0 0 5px #e6572f);
+    transform: scale(1.025);
+  }
 }
 .cta .container .cta_img.hide {
   transition: transform ease 0.75s 0.25s, opacity ease 0.75s 0.25s;
@@ -1103,11 +1087,11 @@ footer .copy p a:hover {
   border: 2px solid rgba(230, 87, 47, 0.2);
   transition: border 0.3s ease, transform 0.3s ease;
 }
-.pricing .container .price:hover {
-  border: 2px solid #e6572f;
-}
-.pricing .container .price:hover {
-  transform: translateY(-2rem);
+@media (min-width: 1200px) {
+  .pricing .container .price:hover {
+    border: 2px solid #e6572f;
+    transform: translateY(-1rem);
+  }
 }
 .pricing .container .price img {
   width: 10rem;
@@ -1186,8 +1170,10 @@ footer .copy p a:hover {
   padding: 3rem;
   height: auto;
 }
-.testimonials .container .swiper-container .swiper .swiper-wrapper .swiper-slide:hover {
-  border: 2px solid #e6572f;
+@media (min-width: 1200px) {
+  .testimonials .container .swiper-container .swiper .swiper-wrapper .swiper-slide:hover {
+    border: 2px solid #e6572f;
+  }
 }
 .testimonials .container .swiper-container .swiper .swiper-wrapper .swiper-slide img {
   width: 5rem;

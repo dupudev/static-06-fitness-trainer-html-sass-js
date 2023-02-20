@@ -205,7 +205,6 @@ hr {
 .hero {
   overflow: hidden;
   height: 40vh;
-  //   padding-top: 6rem;
   background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgb(20, 20, 20, 0.9)),
     url('../../../img/hero_bg.jpg');
   background-position: center;
@@ -259,20 +258,22 @@ footer {
       @include media(lg) {
         margin-top: 0;
       }
-      a {
-        position: relative;
-        &:after {
-          position: absolute;
-          content: '';
-          background-color: $clr_accent;
-          left: 0;
-          bottom: 0;
-          height: 2px;
-          width: 0;
-          transition: $transition;
-        }
-        &:hover::after {
-          width: 100%;
+      .kontakt {
+        a {
+          position: relative;
+          &:after {
+            position: absolute;
+            content: '';
+            background-color: $clr_accent;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            transition: $transition;
+          }
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
     }
