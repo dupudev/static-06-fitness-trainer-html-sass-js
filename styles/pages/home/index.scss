@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   .container {
     @media (orientation: landscape) {
-      flex-direction: row;
+      flex-direction: row !important;
     }
     @include media(xl) {
       flex-direction: row;
@@ -25,6 +25,10 @@
       margin-bottom: 3rem;
       span {
         color: $clr_accent;
+      }
+      @media (orientation: landscape) {
+        flex-grow: 1 !important;
+        flex-basis: 0 !important;
       }
       .button {
         @include media(lg) {
@@ -56,6 +60,7 @@
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
+
       @include media(xl) {
         background-position: bottom right;
         margin-top: 2rem;

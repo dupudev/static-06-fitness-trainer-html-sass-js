@@ -748,7 +748,7 @@ footer .copy p a:hover {
 }
 @media (orientation: landscape) {
   .hero_home .container {
-    flex-direction: row;
+    flex-direction: row !important;
   }
 }
 @media (min-width: 1200px) {
@@ -761,6 +761,12 @@ footer .copy p a:hover {
 }
 .hero_home .container .text span {
   color: #e6572f;
+}
+@media (orientation: landscape) {
+  .hero_home .container .text {
+    flex-grow: 1 !important;
+    flex-basis: 0 !important;
+  }
 }
 .hero_home .container .text .button {
   color: #ebebeb !important;
