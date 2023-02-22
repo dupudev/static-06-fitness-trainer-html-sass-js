@@ -19,6 +19,8 @@ window.onload = () => {
   preloader.addEventListener('transitionend', () => {
     preloader.style.display = 'none';
   });
+  
+  // Observe elements after site fully loaded
   hiddenElements.forEach((element) => {
     observer.observe(element);
   });

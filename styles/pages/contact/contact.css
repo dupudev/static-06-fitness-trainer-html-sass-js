@@ -861,4 +861,8 @@ footer .copy p a:hover {
 }
 .contact .contact_info .contact_form form .button:hover {
   border: 1px solid #e6572f;
+}
+.contact #map {
+  width: 100%;
+  height: 60rem;
 }/*# sourceMappingURL=contact.css.map */
